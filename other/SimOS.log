@@ -1,0 +1,371 @@
+2022-12-18 14:38:02 INFO  BankerAlgorithm:40 - 进程P0请求分配资源：[1, 1, 1]
+2022-12-18 14:38:02 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:02 INFO  BankerAlgorithm:127 - 进程P0执行完毕
+2022-12-18 14:38:02 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:02 INFO  BankerAlgorithm:58 - 进程P0的资源请求：[1, 1, 1] 通过
+2022-12-18 14:38:02 INFO  ResourceManager:61 - 进程P0成功分配资源  当前可用资源数：14-11-5
+2022-12-18 14:38:02 INFO  FCFS:59 - 运行进程:0
+2022-12-18 14:38:04 INFO  BankerAlgorithm:40 - 进程P0请求分配资源：[3, 2, 1]
+2022-12-18 14:38:04 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:04 INFO  BankerAlgorithm:127 - 进程P0执行完毕
+2022-12-18 14:38:04 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:04 INFO  BankerAlgorithm:58 - 进程P0的资源请求：[3, 2, 1] 通过
+2022-12-18 14:38:04 INFO  ResourceManager:61 - 进程P0成功分配资源  当前可用资源数：11-9-4
+2022-12-18 14:38:05 INFO  ResourceManager:109 - 进程P0成功释放资源  当前可用资源数：15-12-6
+2022-12-18 14:38:06 INFO  FCFS:82 - 进程0执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:40 - 进程P1请求分配资源：[1, 1, 1]
+2022-12-18 14:38:13 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:13 INFO  BankerAlgorithm:127 - 进程P1执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:13 INFO  BankerAlgorithm:58 - 进程P1的资源请求：[1, 1, 1] 通过
+2022-12-18 14:38:13 INFO  ResourceManager:61 - 进程P1成功分配资源  当前可用资源数：14-11-5
+2022-12-18 14:38:13 INFO  BankerAlgorithm:40 - 进程P2请求分配资源：[1, 1, 1]
+2022-12-18 14:38:13 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:13 INFO  BankerAlgorithm:127 - 进程P1执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:127 - 进程P2执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:13 INFO  BankerAlgorithm:58 - 进程P2的资源请求：[1, 1, 1] 通过
+2022-12-18 14:38:13 INFO  ResourceManager:61 - 进程P2成功分配资源  当前可用资源数：13-10-4
+2022-12-18 14:38:13 INFO  BankerAlgorithm:40 - 进程P3请求分配资源：[1, 1, 1]
+2022-12-18 14:38:13 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:13 INFO  BankerAlgorithm:127 - 进程P1执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:127 - 进程P2执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:127 - 进程P3执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:13 INFO  BankerAlgorithm:58 - 进程P3的资源请求：[1, 1, 1] 通过
+2022-12-18 14:38:13 INFO  ResourceManager:61 - 进程P3成功分配资源  当前可用资源数：12-9-3
+2022-12-18 14:38:13 INFO  FCFS:59 - 运行进程:1
+2022-12-18 14:38:13 INFO  BankerAlgorithm:40 - 进程P4请求分配资源：[1, 1, 1]
+2022-12-18 14:38:13 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:13 INFO  BankerAlgorithm:127 - 进程P1执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:127 - 进程P2执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:127 - 进程P3执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:127 - 进程P4执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:13 INFO  BankerAlgorithm:58 - 进程P4的资源请求：[1, 1, 1] 通过
+2022-12-18 14:38:13 INFO  ResourceManager:61 - 进程P4成功分配资源  当前可用资源数：11-8-2
+2022-12-18 14:38:13 INFO  BankerAlgorithm:40 - 进程P5请求分配资源：[1, 1, 1]
+2022-12-18 14:38:13 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:13 INFO  BankerAlgorithm:127 - 进程P1执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:127 - 进程P2执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:127 - 进程P3执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:127 - 进程P4执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:127 - 进程P5执行完毕
+2022-12-18 14:38:13 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:13 INFO  BankerAlgorithm:58 - 进程P5的资源请求：[1, 1, 1] 通过
+2022-12-18 14:38:13 INFO  ResourceManager:61 - 进程P5成功分配资源  当前可用资源数：10-7-1
+2022-12-18 14:38:14 INFO  BankerAlgorithm:40 - 进程P6请求分配资源：[1, 1, 1]
+2022-12-18 14:38:14 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:14 INFO  BankerAlgorithm:127 - 进程P1执行完毕
+2022-12-18 14:38:14 INFO  BankerAlgorithm:127 - 进程P2执行完毕
+2022-12-18 14:38:14 INFO  BankerAlgorithm:127 - 进程P3执行完毕
+2022-12-18 14:38:14 INFO  BankerAlgorithm:127 - 进程P4执行完毕
+2022-12-18 14:38:14 INFO  BankerAlgorithm:127 - 进程P5执行完毕
+2022-12-18 14:38:14 INFO  BankerAlgorithm:127 - 进程P6执行完毕
+2022-12-18 14:38:14 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:14 INFO  BankerAlgorithm:58 - 进程P6的资源请求：[1, 1, 1] 通过
+2022-12-18 14:38:14 INFO  ResourceManager:61 - 进程P6成功分配资源  当前可用资源数：9-6-0
+2022-12-18 14:38:14 INFO  BankerAlgorithm:40 - 进程P7请求分配资源：[1, 1, 1]
+2022-12-18 14:38:14 ERROR ProcessManager:128 - 可用资源数不足，无法满足进程P7的请求
+2022-12-18 14:38:14 INFO  BankerAlgorithm:40 - 进程P8请求分配资源：[1, 1, 1]
+2022-12-18 14:38:14 ERROR ProcessManager:128 - 可用资源数不足，无法满足进程P8的请求
+2022-12-18 14:38:14 INFO  BankerAlgorithm:40 - 进程P9请求分配资源：[1, 1, 1]
+2022-12-18 14:38:14 ERROR ProcessManager:128 - 可用资源数不足，无法满足进程P9的请求
+2022-12-18 14:38:14 INFO  BankerAlgorithm:40 - 进程P1请求分配资源：[2, 1, 0]
+2022-12-18 14:38:14 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:14 INFO  BankerAlgorithm:127 - 进程P1执行完毕
+2022-12-18 14:38:14 INFO  BankerAlgorithm:127 - 进程P2执行完毕
+2022-12-18 14:38:14 INFO  BankerAlgorithm:127 - 进程P3执行完毕
+2022-12-18 14:38:14 INFO  BankerAlgorithm:127 - 进程P4执行完毕
+2022-12-18 14:38:14 INFO  BankerAlgorithm:127 - 进程P5执行完毕
+2022-12-18 14:38:14 INFO  BankerAlgorithm:127 - 进程P6执行完毕
+2022-12-18 14:38:14 INFO  BankerAlgorithm:127 - 进程P7执行完毕
+2022-12-18 14:38:14 INFO  BankerAlgorithm:127 - 进程P8执行完毕
+2022-12-18 14:38:14 INFO  BankerAlgorithm:127 - 进程P9执行完毕
+2022-12-18 14:38:14 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:14 INFO  BankerAlgorithm:58 - 进程P1的资源请求：[2, 1, 0] 通过
+2022-12-18 14:38:14 INFO  ResourceManager:61 - 进程P1成功分配资源  当前可用资源数：7-5-0
+2022-12-18 14:38:16 INFO  ResourceManager:109 - 进程P1成功释放资源  当前可用资源数：10-7-1
+2022-12-18 14:38:16 INFO  BankerAlgorithm:40 - 进程P7请求分配资源：[1, 1, 1]
+2022-12-18 14:38:16 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:16 INFO  BankerAlgorithm:127 - 进程P2执行完毕
+2022-12-18 14:38:16 INFO  BankerAlgorithm:127 - 进程P3执行完毕
+2022-12-18 14:38:16 INFO  BankerAlgorithm:127 - 进程P4执行完毕
+2022-12-18 14:38:16 INFO  BankerAlgorithm:127 - 进程P5执行完毕
+2022-12-18 14:38:16 INFO  BankerAlgorithm:127 - 进程P6执行完毕
+2022-12-18 14:38:16 INFO  BankerAlgorithm:127 - 进程P7执行完毕
+2022-12-18 14:38:16 INFO  BankerAlgorithm:127 - 进程P8执行完毕
+2022-12-18 14:38:16 INFO  BankerAlgorithm:127 - 进程P9执行完毕
+2022-12-18 14:38:16 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:16 INFO  BankerAlgorithm:58 - 进程P7的资源请求：[1, 1, 1] 通过
+2022-12-18 14:38:16 INFO  ResourceManager:61 - 进程P7成功分配资源  当前可用资源数：9-6-0
+2022-12-18 14:38:16 INFO  BankerAlgorithm:40 - 进程P8请求分配资源：[1, 1, 1]
+2022-12-18 14:38:16 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P8的请求
+2022-12-18 14:38:16 INFO  BankerAlgorithm:40 - 进程P9请求分配资源：[1, 1, 1]
+2022-12-18 14:38:16 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P9的请求
+2022-12-18 14:38:16 INFO  FCFS:82 - 进程1执行完毕
+2022-12-18 14:38:16 INFO  FCFS:59 - 运行进程:2
+2022-12-18 14:38:18 INFO  BankerAlgorithm:40 - 进程P2请求分配资源：[1, 0, 0]
+2022-12-18 14:38:18 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:18 INFO  BankerAlgorithm:127 - 进程P2执行完毕
+2022-12-18 14:38:18 INFO  BankerAlgorithm:127 - 进程P3执行完毕
+2022-12-18 14:38:18 INFO  BankerAlgorithm:127 - 进程P4执行完毕
+2022-12-18 14:38:18 INFO  BankerAlgorithm:127 - 进程P5执行完毕
+2022-12-18 14:38:18 INFO  BankerAlgorithm:127 - 进程P6执行完毕
+2022-12-18 14:38:18 INFO  BankerAlgorithm:127 - 进程P7执行完毕
+2022-12-18 14:38:18 INFO  BankerAlgorithm:127 - 进程P8执行完毕
+2022-12-18 14:38:18 INFO  BankerAlgorithm:127 - 进程P9执行完毕
+2022-12-18 14:38:18 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:18 INFO  BankerAlgorithm:58 - 进程P2的资源请求：[1, 0, 0] 通过
+2022-12-18 14:38:18 INFO  ResourceManager:61 - 进程P2成功分配资源  当前可用资源数：8-6-0
+2022-12-18 14:38:20 INFO  ResourceManager:109 - 进程P2成功释放资源  当前可用资源数：10-7-1
+2022-12-18 14:38:20 INFO  BankerAlgorithm:40 - 进程P8请求分配资源：[1, 1, 1]
+2022-12-18 14:38:20 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:20 INFO  BankerAlgorithm:127 - 进程P3执行完毕
+2022-12-18 14:38:20 INFO  BankerAlgorithm:127 - 进程P4执行完毕
+2022-12-18 14:38:20 INFO  BankerAlgorithm:127 - 进程P5执行完毕
+2022-12-18 14:38:20 INFO  BankerAlgorithm:127 - 进程P6执行完毕
+2022-12-18 14:38:20 INFO  BankerAlgorithm:127 - 进程P7执行完毕
+2022-12-18 14:38:20 INFO  BankerAlgorithm:127 - 进程P8执行完毕
+2022-12-18 14:38:20 INFO  BankerAlgorithm:127 - 进程P9执行完毕
+2022-12-18 14:38:20 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:20 INFO  BankerAlgorithm:58 - 进程P8的资源请求：[1, 1, 1] 通过
+2022-12-18 14:38:20 INFO  ResourceManager:61 - 进程P8成功分配资源  当前可用资源数：9-6-0
+2022-12-18 14:38:20 INFO  BankerAlgorithm:40 - 进程P9请求分配资源：[1, 1, 1]
+2022-12-18 14:38:20 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P9的请求
+2022-12-18 14:38:21 INFO  FCFS:82 - 进程2执行完毕
+2022-12-18 14:38:21 INFO  FCFS:59 - 运行进程:3
+2022-12-18 14:38:23 INFO  BankerAlgorithm:40 - 进程P3请求分配资源：[3, 1, 0]
+2022-12-18 14:38:23 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:23 INFO  BankerAlgorithm:127 - 进程P3执行完毕
+2022-12-18 14:38:23 INFO  BankerAlgorithm:127 - 进程P4执行完毕
+2022-12-18 14:38:23 INFO  BankerAlgorithm:127 - 进程P5执行完毕
+2022-12-18 14:38:23 INFO  BankerAlgorithm:127 - 进程P6执行完毕
+2022-12-18 14:38:23 INFO  BankerAlgorithm:127 - 进程P7执行完毕
+2022-12-18 14:38:23 INFO  BankerAlgorithm:127 - 进程P8执行完毕
+2022-12-18 14:38:23 INFO  BankerAlgorithm:127 - 进程P9执行完毕
+2022-12-18 14:38:23 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:23 INFO  BankerAlgorithm:58 - 进程P3的资源请求：[3, 1, 0] 通过
+2022-12-18 14:38:23 INFO  ResourceManager:61 - 进程P3成功分配资源  当前可用资源数：6-5-0
+2022-12-18 14:38:23 INFO  BankerAlgorithm:40 - 进程P10请求分配资源：[1, 1, 1]
+2022-12-18 14:38:23 ERROR ProcessManager:128 - 可用资源数不足，无法满足进程P10的请求
+2022-12-18 14:38:23 INFO  BankerAlgorithm:40 - 进程P11请求分配资源：[1, 1, 1]
+2022-12-18 14:38:23 ERROR ProcessManager:128 - 可用资源数不足，无法满足进程P11的请求
+2022-12-18 14:38:23 INFO  BankerAlgorithm:40 - 进程P12请求分配资源：[1, 1, 1]
+2022-12-18 14:38:23 ERROR ProcessManager:128 - 可用资源数不足，无法满足进程P12的请求
+2022-12-18 14:38:26 INFO  ResourceManager:109 - 进程P3成功释放资源  当前可用资源数：10-7-1
+2022-12-18 14:38:26 INFO  BankerAlgorithm:40 - 进程P9请求分配资源：[1, 1, 1]
+2022-12-18 14:38:26 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:26 INFO  BankerAlgorithm:127 - 进程P5执行完毕
+2022-12-18 14:38:26 INFO  BankerAlgorithm:127 - 进程P4执行完毕
+2022-12-18 14:38:26 INFO  BankerAlgorithm:127 - 进程P6执行完毕
+2022-12-18 14:38:26 INFO  BankerAlgorithm:127 - 进程P7执行完毕
+2022-12-18 14:38:26 INFO  BankerAlgorithm:127 - 进程P8执行完毕
+2022-12-18 14:38:26 INFO  BankerAlgorithm:127 - 进程P9执行完毕
+2022-12-18 14:38:26 INFO  BankerAlgorithm:127 - 进程P10执行完毕
+2022-12-18 14:38:26 INFO  BankerAlgorithm:127 - 进程P11执行完毕
+2022-12-18 14:38:26 INFO  BankerAlgorithm:127 - 进程P12执行完毕
+2022-12-18 14:38:26 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:26 INFO  BankerAlgorithm:58 - 进程P9的资源请求：[1, 1, 1] 通过
+2022-12-18 14:38:26 INFO  ResourceManager:61 - 进程P9成功分配资源  当前可用资源数：9-6-0
+2022-12-18 14:38:26 INFO  BankerAlgorithm:40 - 进程P10请求分配资源：[1, 1, 1]
+2022-12-18 14:38:26 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P10的请求
+2022-12-18 14:38:26 INFO  BankerAlgorithm:40 - 进程P11请求分配资源：[1, 1, 1]
+2022-12-18 14:38:26 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P11的请求
+2022-12-18 14:38:26 INFO  BankerAlgorithm:40 - 进程P12请求分配资源：[1, 1, 1]
+2022-12-18 14:38:26 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P12的请求
+2022-12-18 14:38:26 INFO  FCFS:82 - 进程3执行完毕
+2022-12-18 14:38:26 INFO  FCFS:59 - 运行进程:4
+2022-12-18 14:38:28 INFO  BankerAlgorithm:40 - 进程P4请求分配资源：[0, 1, 1]
+2022-12-18 14:38:28 INFO  Process:36 - 进程P4申请资源失败，陷入阻塞
+2022-12-18 14:38:29 INFO  FCFS:82 - 进程4被阻塞
+2022-12-18 14:38:29 INFO  FCFS:59 - 运行进程:5
+2022-12-18 14:38:30 INFO  BankerAlgorithm:40 - 进程P5请求分配资源：[1, 2, 0]
+2022-12-18 14:38:30 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:30 INFO  BankerAlgorithm:127 - 进程P5执行完毕
+2022-12-18 14:38:30 INFO  BankerAlgorithm:127 - 进程P4执行完毕
+2022-12-18 14:38:30 INFO  BankerAlgorithm:127 - 进程P6执行完毕
+2022-12-18 14:38:30 INFO  BankerAlgorithm:127 - 进程P7执行完毕
+2022-12-18 14:38:30 INFO  BankerAlgorithm:127 - 进程P8执行完毕
+2022-12-18 14:38:30 INFO  BankerAlgorithm:127 - 进程P9执行完毕
+2022-12-18 14:38:30 INFO  BankerAlgorithm:127 - 进程P10执行完毕
+2022-12-18 14:38:30 INFO  BankerAlgorithm:127 - 进程P11执行完毕
+2022-12-18 14:38:30 INFO  BankerAlgorithm:127 - 进程P12执行完毕
+2022-12-18 14:38:30 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:30 INFO  BankerAlgorithm:58 - 进程P5的资源请求：[1, 2, 0] 通过
+2022-12-18 14:38:30 INFO  ResourceManager:61 - 进程P5成功分配资源  当前可用资源数：8-4-0
+2022-12-18 14:38:32 INFO  ResourceManager:109 - 进程P5成功释放资源  当前可用资源数：10-7-1
+2022-12-18 14:38:32 INFO  BankerAlgorithm:40 - 进程P4请求分配资源：[0, 1, 1]
+2022-12-18 14:38:32 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:32 INFO  BankerAlgorithm:127 - 进程P4执行完毕
+2022-12-18 14:38:32 INFO  BankerAlgorithm:127 - 进程P6执行完毕
+2022-12-18 14:38:32 INFO  BankerAlgorithm:127 - 进程P7执行完毕
+2022-12-18 14:38:32 INFO  BankerAlgorithm:127 - 进程P8执行完毕
+2022-12-18 14:38:32 INFO  BankerAlgorithm:127 - 进程P9执行完毕
+2022-12-18 14:38:32 INFO  BankerAlgorithm:127 - 进程P10执行完毕
+2022-12-18 14:38:32 INFO  BankerAlgorithm:127 - 进程P11执行完毕
+2022-12-18 14:38:32 INFO  BankerAlgorithm:127 - 进程P12执行完毕
+2022-12-18 14:38:32 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:32 INFO  BankerAlgorithm:58 - 进程P4的资源请求：[0, 1, 1] 通过
+2022-12-18 14:38:32 INFO  ResourceManager:61 - 进程P4成功分配资源  当前可用资源数：10-6-0
+2022-12-18 14:38:32 INFO  BankerAlgorithm:40 - 进程P10请求分配资源：[1, 1, 1]
+2022-12-18 14:38:32 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P10的请求
+2022-12-18 14:38:32 INFO  BankerAlgorithm:40 - 进程P11请求分配资源：[1, 1, 1]
+2022-12-18 14:38:32 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P11的请求
+2022-12-18 14:38:32 INFO  BankerAlgorithm:40 - 进程P12请求分配资源：[1, 1, 1]
+2022-12-18 14:38:32 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P12的请求
+2022-12-18 14:38:32 INFO  FCFS:82 - 进程5执行完毕
+2022-12-18 14:38:33 INFO  FCFS:59 - 运行进程:6
+2022-12-18 14:38:35 INFO  BankerAlgorithm:40 - 进程P6请求分配资源：[3, 2, 1]
+2022-12-18 14:38:35 INFO  Process:36 - 进程P6申请资源失败，陷入阻塞
+2022-12-18 14:38:35 INFO  FCFS:82 - 进程6被阻塞
+2022-12-18 14:38:35 INFO  FCFS:59 - 运行进程:7
+2022-12-18 14:38:37 INFO  BankerAlgorithm:40 - 进程P7请求分配资源：[2, 1, 1]
+2022-12-18 14:38:37 INFO  Process:36 - 进程P7申请资源失败，陷入阻塞
+2022-12-18 14:38:37 INFO  FCFS:82 - 进程7被阻塞
+2022-12-18 14:38:38 INFO  FCFS:59 - 运行进程:8
+2022-12-18 14:38:39 INFO  BankerAlgorithm:40 - 进程P8请求分配资源：[2, 1, 1]
+2022-12-18 14:38:39 INFO  Process:36 - 进程P8申请资源失败，陷入阻塞
+2022-12-18 14:38:39 INFO  FCFS:82 - 进程8被阻塞
+2022-12-18 14:38:39 INFO  FCFS:59 - 运行进程:9
+2022-12-18 14:38:41 INFO  BankerAlgorithm:40 - 进程P9请求分配资源：[0, 2, 1]
+2022-12-18 14:38:41 INFO  Process:36 - 进程P9申请资源失败，陷入阻塞
+2022-12-18 14:38:42 INFO  FCFS:82 - 进程9被阻塞
+2022-12-18 14:38:42 INFO  FCFS:59 - 运行进程:4
+2022-12-18 14:38:44 INFO  ResourceManager:109 - 进程P4成功释放资源  当前可用资源数：11-8-2
+2022-12-18 14:38:44 INFO  BankerAlgorithm:40 - 进程P6请求分配资源：[3, 2, 1]
+2022-12-18 14:38:44 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:44 INFO  BankerAlgorithm:127 - 进程P6执行完毕
+2022-12-18 14:38:44 INFO  BankerAlgorithm:127 - 进程P7执行完毕
+2022-12-18 14:38:44 INFO  BankerAlgorithm:127 - 进程P8执行完毕
+2022-12-18 14:38:44 INFO  BankerAlgorithm:127 - 进程P9执行完毕
+2022-12-18 14:38:44 INFO  BankerAlgorithm:127 - 进程P10执行完毕
+2022-12-18 14:38:44 INFO  BankerAlgorithm:127 - 进程P11执行完毕
+2022-12-18 14:38:44 INFO  BankerAlgorithm:127 - 进程P12执行完毕
+2022-12-18 14:38:44 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:44 INFO  BankerAlgorithm:58 - 进程P6的资源请求：[3, 2, 1] 通过
+2022-12-18 14:38:44 INFO  ResourceManager:61 - 进程P6成功分配资源  当前可用资源数：8-6-1
+2022-12-18 14:38:44 INFO  BankerAlgorithm:40 - 进程P7请求分配资源：[2, 1, 1]
+2022-12-18 14:38:44 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:44 INFO  BankerAlgorithm:127 - 进程P6执行完毕
+2022-12-18 14:38:44 INFO  BankerAlgorithm:127 - 进程P7执行完毕
+2022-12-18 14:38:44 INFO  BankerAlgorithm:127 - 进程P8执行完毕
+2022-12-18 14:38:44 INFO  BankerAlgorithm:127 - 进程P9执行完毕
+2022-12-18 14:38:44 INFO  BankerAlgorithm:127 - 进程P10执行完毕
+2022-12-18 14:38:44 INFO  BankerAlgorithm:127 - 进程P11执行完毕
+2022-12-18 14:38:44 INFO  BankerAlgorithm:127 - 进程P12执行完毕
+2022-12-18 14:38:44 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:44 INFO  BankerAlgorithm:58 - 进程P7的资源请求：[2, 1, 1] 通过
+2022-12-18 14:38:44 INFO  ResourceManager:61 - 进程P7成功分配资源  当前可用资源数：6-5-0
+2022-12-18 14:38:44 INFO  BankerAlgorithm:40 - 进程P8请求分配资源：[2, 1, 1]
+2022-12-18 14:38:44 ERROR ProcessManager:173 - 可用资源数不足，无法满足进程P8的请求
+2022-12-18 14:38:44 INFO  BankerAlgorithm:40 - 进程P9请求分配资源：[0, 2, 1]
+2022-12-18 14:38:44 ERROR ProcessManager:173 - 可用资源数不足，无法满足进程P9的请求
+2022-12-18 14:38:44 INFO  BankerAlgorithm:40 - 进程P10请求分配资源：[1, 1, 1]
+2022-12-18 14:38:44 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P10的请求
+2022-12-18 14:38:44 INFO  BankerAlgorithm:40 - 进程P11请求分配资源：[1, 1, 1]
+2022-12-18 14:38:44 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P11的请求
+2022-12-18 14:38:44 INFO  BankerAlgorithm:40 - 进程P12请求分配资源：[1, 1, 1]
+2022-12-18 14:38:44 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P12的请求
+2022-12-18 14:38:44 INFO  FCFS:82 - 进程4执行完毕
+2022-12-18 14:38:45 INFO  FCFS:59 - 运行进程:6
+2022-12-18 14:38:46 INFO  ResourceManager:109 - 进程P6成功释放资源  当前可用资源数：10-8-2
+2022-12-18 14:38:46 INFO  BankerAlgorithm:40 - 进程P8请求分配资源：[2, 1, 1]
+2022-12-18 14:38:46 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:46 INFO  BankerAlgorithm:127 - 进程P7执行完毕
+2022-12-18 14:38:46 INFO  BankerAlgorithm:127 - 进程P8执行完毕
+2022-12-18 14:38:46 INFO  BankerAlgorithm:127 - 进程P9执行完毕
+2022-12-18 14:38:46 INFO  BankerAlgorithm:127 - 进程P10执行完毕
+2022-12-18 14:38:46 INFO  BankerAlgorithm:127 - 进程P11执行完毕
+2022-12-18 14:38:46 INFO  BankerAlgorithm:127 - 进程P12执行完毕
+2022-12-18 14:38:46 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:46 INFO  BankerAlgorithm:58 - 进程P8的资源请求：[2, 1, 1] 通过
+2022-12-18 14:38:46 INFO  ResourceManager:61 - 进程P8成功分配资源  当前可用资源数：8-7-1
+2022-12-18 14:38:46 INFO  BankerAlgorithm:40 - 进程P9请求分配资源：[0, 2, 1]
+2022-12-18 14:38:46 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:46 INFO  BankerAlgorithm:127 - 进程P7执行完毕
+2022-12-18 14:38:46 INFO  BankerAlgorithm:127 - 进程P8执行完毕
+2022-12-18 14:38:46 INFO  BankerAlgorithm:127 - 进程P9执行完毕
+2022-12-18 14:38:46 INFO  BankerAlgorithm:127 - 进程P10执行完毕
+2022-12-18 14:38:46 INFO  BankerAlgorithm:127 - 进程P11执行完毕
+2022-12-18 14:38:46 INFO  BankerAlgorithm:127 - 进程P12执行完毕
+2022-12-18 14:38:46 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:46 INFO  BankerAlgorithm:58 - 进程P9的资源请求：[0, 2, 1] 通过
+2022-12-18 14:38:46 INFO  ResourceManager:61 - 进程P9成功分配资源  当前可用资源数：8-5-0
+2022-12-18 14:38:46 INFO  BankerAlgorithm:40 - 进程P10请求分配资源：[1, 1, 1]
+2022-12-18 14:38:46 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P10的请求
+2022-12-18 14:38:46 INFO  BankerAlgorithm:40 - 进程P11请求分配资源：[1, 1, 1]
+2022-12-18 14:38:46 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P11的请求
+2022-12-18 14:38:46 INFO  BankerAlgorithm:40 - 进程P12请求分配资源：[1, 1, 1]
+2022-12-18 14:38:46 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P12的请求
+2022-12-18 14:38:46 INFO  FCFS:82 - 进程6执行完毕
+2022-12-18 14:38:46 INFO  FCFS:59 - 运行进程:7
+2022-12-18 14:38:47 INFO  ResourceManager:109 - 进程P7成功释放资源  当前可用资源数：11-7-2
+2022-12-18 14:38:47 INFO  BankerAlgorithm:40 - 进程P10请求分配资源：[1, 1, 1]
+2022-12-18 14:38:47 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:47 INFO  BankerAlgorithm:127 - 进程P8执行完毕
+2022-12-18 14:38:47 INFO  BankerAlgorithm:127 - 进程P9执行完毕
+2022-12-18 14:38:47 INFO  BankerAlgorithm:127 - 进程P10执行完毕
+2022-12-18 14:38:47 INFO  BankerAlgorithm:127 - 进程P11执行完毕
+2022-12-18 14:38:47 INFO  BankerAlgorithm:127 - 进程P12执行完毕
+2022-12-18 14:38:47 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:47 INFO  BankerAlgorithm:58 - 进程P10的资源请求：[1, 1, 1] 通过
+2022-12-18 14:38:47 INFO  ResourceManager:61 - 进程P10成功分配资源  当前可用资源数：10-6-1
+2022-12-18 14:38:47 INFO  BankerAlgorithm:40 - 进程P11请求分配资源：[1, 1, 1]
+2022-12-18 14:38:47 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:47 INFO  BankerAlgorithm:127 - 进程P8执行完毕
+2022-12-18 14:38:47 INFO  BankerAlgorithm:127 - 进程P9执行完毕
+2022-12-18 14:38:47 INFO  BankerAlgorithm:127 - 进程P10执行完毕
+2022-12-18 14:38:47 INFO  BankerAlgorithm:127 - 进程P11执行完毕
+2022-12-18 14:38:47 INFO  BankerAlgorithm:127 - 进程P12执行完毕
+2022-12-18 14:38:47 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:47 INFO  BankerAlgorithm:58 - 进程P11的资源请求：[1, 1, 1] 通过
+2022-12-18 14:38:47 INFO  ResourceManager:61 - 进程P11成功分配资源  当前可用资源数：9-5-0
+2022-12-18 14:38:47 INFO  BankerAlgorithm:40 - 进程P12请求分配资源：[1, 1, 1]
+2022-12-18 14:38:47 ERROR ProcessManager:156 - 可用资源数不足，无法满足进程P12的请求
+2022-12-18 14:38:48 INFO  FCFS:82 - 进程7执行完毕
+2022-12-18 14:38:48 INFO  FCFS:59 - 运行进程:8
+2022-12-18 14:38:49 INFO  ResourceManager:109 - 进程P8成功释放资源  当前可用资源数：12-7-2
+2022-12-18 14:38:49 INFO  BankerAlgorithm:40 - 进程P12请求分配资源：[1, 1, 1]
+2022-12-18 14:38:49 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:49 INFO  BankerAlgorithm:127 - 进程P9执行完毕
+2022-12-18 14:38:49 INFO  BankerAlgorithm:127 - 进程P10执行完毕
+2022-12-18 14:38:49 INFO  BankerAlgorithm:127 - 进程P11执行完毕
+2022-12-18 14:38:49 INFO  BankerAlgorithm:127 - 进程P12执行完毕
+2022-12-18 14:38:49 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:49 INFO  BankerAlgorithm:58 - 进程P12的资源请求：[1, 1, 1] 通过
+2022-12-18 14:38:49 INFO  ResourceManager:61 - 进程P12成功分配资源  当前可用资源数：11-6-1
+2022-12-18 14:38:49 INFO  FCFS:82 - 进程8执行完毕
+2022-12-18 14:38:49 INFO  FCFS:59 - 运行进程:9
+2022-12-18 14:38:51 INFO  ResourceManager:109 - 进程P9成功释放资源  当前可用资源数：12-9-3
+2022-12-18 14:38:52 INFO  FCFS:82 - 进程9执行完毕
+2022-12-18 14:38:52 INFO  FCFS:59 - 运行进程:10
+2022-12-18 14:38:53 INFO  BankerAlgorithm:40 - 进程P10请求分配资源：[0, 2, 0]
+2022-12-18 14:38:53 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:53 INFO  BankerAlgorithm:127 - 进程P10执行完毕
+2022-12-18 14:38:53 INFO  BankerAlgorithm:127 - 进程P11执行完毕
+2022-12-18 14:38:53 INFO  BankerAlgorithm:127 - 进程P12执行完毕
+2022-12-18 14:38:53 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:53 INFO  BankerAlgorithm:58 - 进程P10的资源请求：[0, 2, 0] 通过
+2022-12-18 14:38:53 INFO  ResourceManager:61 - 进程P10成功分配资源  当前可用资源数：12-7-3
+2022-12-18 14:38:54 INFO  ResourceManager:109 - 进程P10成功释放资源  当前可用资源数：13-10-4
+2022-12-18 14:38:55 INFO  FCFS:82 - 进程10执行完毕
+2022-12-18 14:38:55 INFO  FCFS:59 - 运行进程:11
+2022-12-18 14:38:57 INFO  BankerAlgorithm:40 - 进程P11请求分配资源：[3, 0, 0]
+2022-12-18 14:38:57 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:38:57 INFO  BankerAlgorithm:127 - 进程P11执行完毕
+2022-12-18 14:38:57 INFO  BankerAlgorithm:127 - 进程P12执行完毕
+2022-12-18 14:38:57 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:38:57 INFO  BankerAlgorithm:58 - 进程P11的资源请求：[3, 0, 0] 通过
+2022-12-18 14:38:57 INFO  ResourceManager:61 - 进程P11成功分配资源  当前可用资源数：10-10-4
+2022-12-18 14:38:59 INFO  ResourceManager:109 - 进程P11成功释放资源  当前可用资源数：14-11-5
+2022-12-18 14:39:00 INFO  FCFS:82 - 进程11执行完毕
+2022-12-18 14:39:00 INFO  FCFS:59 - 运行进程:12
+2022-12-18 14:39:01 INFO  BankerAlgorithm:40 - 进程P12请求分配资源：[3, 0, 0]
+2022-12-18 14:39:01 INFO  BankerAlgorithm:92 - 进行安全性检查...
+2022-12-18 14:39:01 INFO  BankerAlgorithm:127 - 进程P12执行完毕
+2022-12-18 14:39:01 INFO  BankerAlgorithm:144 - 安全性检查通过
+2022-12-18 14:39:01 INFO  BankerAlgorithm:58 - 进程P12的资源请求：[3, 0, 0] 通过
+2022-12-18 14:39:01 INFO  ResourceManager:61 - 进程P12成功分配资源  当前可用资源数：11-11-5
+2022-12-18 14:39:03 INFO  ResourceManager:109 - 进程P12成功释放资源  当前可用资源数：15-12-6
+2022-12-18 14:39:04 INFO  FCFS:82 - 进程12执行完毕

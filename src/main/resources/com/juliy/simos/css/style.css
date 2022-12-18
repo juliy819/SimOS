@@ -1,0 +1,17 @@
+.table-column {
+    -fx-alignment: center;
+}
+
+.btn-pm {
+    -fx-background-color: #66CCCC;
+    -fx-cursor: hand;
+    -fx-pref-width: 50;
+    -fx-pref-height: 25;
+}
+
+/*.table-view, .tree-view {*/
+/*    -fx-focus-color: TRANSPARENT;*/
+/*    -fx-faint-focus-color: TRANSPARENT;*/
+/*    -fx-background-color: TRANSPARENT;*/
+/*    -fx-border-color: TRANSPARENT;*/
+/*}*/
