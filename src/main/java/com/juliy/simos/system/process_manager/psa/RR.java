@@ -1,25 +1,26 @@
-package com.juliy.simos.system.process_manager.sa;
+package com.juliy.simos.system.process_manager.psa;
 
-import com.juliy.simos.entity.PCB;
-import com.juliy.simos.entity.PStatus;
+import com.juliy.simos.common.Config;
+import com.juliy.simos.system.process_manager.PCB;
+import com.juliy.simos.system.process_manager.PStatus;
 import org.apache.log4j.Logger;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 先来先服务算法
+ * 轮转调度算法
  * @author JuLiy
- * @date 2022/12/8 23:03
+ * @date 2022/12/11 23:28
  */
-public class FCFS extends ProcessSchedulingAlgorithm {
+public class RR extends ProcessSchedulingAlgorithm {
 
-    private static final Logger log = Logger.getLogger(FCFS.class);
+    private static final Logger log = Logger.getLogger(RR.class);
 
-    public FCFS(List<PCB> readyQueue) {
+
+    public RR(List<PCB> readyQueue) {
         super(readyQueue, log);
     }
-
 
     @Override
     public void run() {
@@ -37,7 +38,7 @@ public class FCFS extends ProcessSchedulingAlgorithm {
                 addPCB(pcb);
                 continue;
             }
-            executeProcess(pcb);
+            executeProcess(pcb, Config.TIME_SLICE);
         }
     }
 }

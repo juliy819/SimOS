@@ -1,6 +1,6 @@
 package com.juliy.simos.system.process_manager.deadlock;
 
-import com.juliy.simos.entity.PCB;
+import com.juliy.simos.system.process_manager.PCB;
 import lombok.Data;
 
 import java.util.ArrayList;
@@ -39,10 +39,6 @@ public class ResourceRequest {
         ResourceRequest r = new ResourceRequest();
         r.setId(pcb.getPid());
         List<Integer> list = pcb.getNeedR();
-        //int aNum = pcb.getNeedR().get(0);
-        //int bNum = pcb.getNeedR().get(1);
-        //int cNum = pcb.getNeedR().get(2);
-        //Collections.addAll(list, aNum, bNum, cNum);
         r.setSource(list);
         return r;
     }

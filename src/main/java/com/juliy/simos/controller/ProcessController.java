@@ -3,15 +3,12 @@ package com.juliy.simos.controller;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXListView;
 import com.juliy.simos.common.Operation;
-import com.juliy.simos.entity.PCB;
-import com.juliy.simos.entity.PStatus;
+import com.juliy.simos.system.process_manager.PCB;
+import com.juliy.simos.system.process_manager.PStatus;
 import com.juliy.simos.system.process_manager.ProcessManager;
-import com.juliy.simos.system.process_manager.sa.ProcessSchedulingAlgorithm;
+import com.juliy.simos.system.process_manager.psa.ProcessSchedulingAlgorithm;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.ProgressBarTableCell;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
@@ -25,9 +22,9 @@ import java.util.List;
  * @author JuLiy
  * @date 2022/12/8 21:43
  */
-public class PcsMgrController extends RootController {
+public class ProcessController extends RootController {
 
-    private static final Logger log = Logger.getLogger(PcsMgrController.class);
+    private static final Logger log = Logger.getLogger(ProcessController.class);
 
     private ProcessManager pcsMgr;
 
@@ -47,6 +44,10 @@ public class PcsMgrController extends RootController {
     private TableColumn<PCB, Integer> tcPriority;
     @FXML
     private TableColumn<PCB, Double> tcProgress;
+    @FXML
+    private TableColumn<PCB, Integer> tcMemory;
+    @FXML
+    private TableColumn<PCB, List<Integer>> tcMaxR;
     @FXML
     private TableColumn<PCB, Integer> tcServiceTime;
     @FXML
@@ -81,7 +82,7 @@ public class PcsMgrController extends RootController {
         cbbSa.getSelectionModel().selectedItemProperty().addListener((obs, ov, nv) -> {
             try {
                 ProcessSchedulingAlgorithm psa =
-                        (ProcessSchedulingAlgorithm) Class.forName("com.juliy.simos.system.process_manager.sa." + nv)
+                        (ProcessSchedulingAlgorithm) Class.forName("com.juliy.simos.system.process_manager.psa." + nv)
                                 .getConstructor(List.class)
                                 .newInstance(pcsMgr.getReadyQueue());
                 pcsMgr.setPsa(psa);
@@ -101,11 +102,25 @@ public class PcsMgrController extends RootController {
         tcStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
         tcPriority.setCellValueFactory(new PropertyValueFactory<>("priority"));
         tcProgress.setCellValueFactory(new PropertyValueFactory<>("progress"));
+        tcMemory.setCellValueFactory(new PropertyValueFactory<>("memorySize"));
+        tcMaxR.setCellValueFactory(new PropertyValueFactory<>("maxR"));
         tcArrivalTime.setCellValueFactory(new PropertyValueFactory<>("arrivalTime"));
         tcServiceTime.setCellValueFactory(new PropertyValueFactory<>("serviceTime"));
         tcUsedTime.setCellValueFactory(new PropertyValueFactory<>("usedTime"));
         //设置进度条
         tcProgress.setCellFactory(ProgressBarTableCell.forTableColumn());
+
+        tcMaxR.setCellFactory(param -> new TableCell<>() {
+            @Override
+            protected void updateItem(List<Integer> item, boolean empty) {
+                super.updateItem(item, empty);
+                if (empty || item == null) {
+                    this.setText(null);
+                } else {
+                    this.setText(item.get(0) + "-" + item.get(1) + "-" + item.get(2));
+                }
+            }
+        });
     }
 
     @FXML
@@ -149,6 +164,16 @@ public class PcsMgrController extends RootController {
         return pcb;
     }
 
+    @FXML
+    void stopPSA() {
+        pcsMgr.stopPSA();
+    }
+
+    @FXML
+    void continuePSA() {
+        pcsMgr.continuePSA();
+    }
+
     /** 自定义列表单元格 */
     static class ProcessCell extends ListCell<PCB> {
         final Label uid = new Label();
@@ -161,7 +186,7 @@ public class PcsMgrController extends RootController {
         }
 
         @Override
-        protected void updateItem(com.juliy.simos.entity.PCB item, boolean empty) {
+        protected void updateItem(PCB item, boolean empty) {
             super.updateItem(item, empty);
             if (empty) {
                 this.setGraphic(null);

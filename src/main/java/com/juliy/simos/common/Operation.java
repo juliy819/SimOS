@@ -35,6 +35,9 @@ public class Operation {
         stage.setScene(new Scene(root));
         stage.setTitle(title);
         stage.setResizable(isResizeable);
+        if (!"Main".equals(fxmlName)) {
+            stage.setAlwaysOnTop(true);
+        }
         Context.stageMap.put(fxmlName, stage);
         return stage;
     }

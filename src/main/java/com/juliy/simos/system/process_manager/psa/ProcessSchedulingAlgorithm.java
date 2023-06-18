@@ -1,9 +1,9 @@
-package com.juliy.simos.system.process_manager.sa;
+package com.juliy.simos.system.process_manager.psa;
 
 import com.juliy.simos.common.Config;
-import com.juliy.simos.entity.PCB;
-import com.juliy.simos.entity.PStatus;
-import com.juliy.simos.entity.Process;
+import com.juliy.simos.system.process_manager.PCB;
+import com.juliy.simos.system.process_manager.PStatus;
+import com.juliy.simos.system.process_manager.Process;
 import javafx.application.Platform;
 import org.apache.log4j.Logger;
 
@@ -93,12 +93,11 @@ public abstract class ProcessSchedulingAlgorithm implements Runnable {
             log.error("进程{" + pcb.getPid() + "}模拟运行时被打断");
         }
 
-        //若进程执行完毕则输出语句，否则加入到就绪队列队尾
+        //若进程执行完毕则输出,若进程阻塞则退出，否则加入到就绪队列队尾
         if (pcb.getUsedTime() == pcb.getServiceTime()) {
             log.info("进程" + pcb.getPid() + "执行完毕");
-        } else {
+        } else if (pcb.getStatus() != PStatus.ACTIVE_BLOCK) {
             addPCB(pcb);
         }
     }
-
 }

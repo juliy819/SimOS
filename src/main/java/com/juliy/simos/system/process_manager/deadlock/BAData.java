@@ -15,5 +15,4 @@ public class BAData {
     private List<Integer> max = new ArrayList<>();
     private List<Integer> need = new ArrayList<>();
     private List<Integer> allocation = new ArrayList<>();
-
 }

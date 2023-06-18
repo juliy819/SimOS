@@ -2,13 +2,11 @@ package com.juliy.simos.system.process_manager;
 
 import com.juliy.simos.common.Operation;
 import com.juliy.simos.controller.MainController;
-import com.juliy.simos.entity.PCB;
-import com.juliy.simos.entity.PStatus;
 import com.juliy.simos.system.process_manager.deadlock.BAData;
 import com.juliy.simos.system.process_manager.deadlock.BAException;
 import com.juliy.simos.system.process_manager.deadlock.BankerAlgorithm;
 import com.juliy.simos.system.process_manager.deadlock.ResourceRequest;
-import com.juliy.simos.system.process_manager.sa.ProcessSchedulingAlgorithm;
+import com.juliy.simos.system.process_manager.psa.ProcessSchedulingAlgorithm;
 import com.juliy.simos.util.IdUtil;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -60,12 +58,24 @@ public class ProcessManager extends Thread {
                 log.error("进程管理器模拟时间流逝时被打断");
             }
             cpuTime.set(String.valueOf(Integer.parseInt(cpuTime.get()) + 1));
-            setSA();
+            updatePSA();
+        }
+    }
+
+    public void stopPSA() {
+        synchronized (saThread) {
+            saThread.suspend();
+        }
+    }
+
+    public void continuePSA() {
+        synchronized (saThread) {
+            saThread.resume();
         }
     }
 
     /** 设置调度算法 */
-    private void setSA() {
+    private void updatePSA() {
         //初次启动时，默认调度算法为复选框的默认第一个选项
         if (psa == null) {
             psa = tempPsa;
@@ -89,16 +99,46 @@ public class ProcessManager extends Thread {
      * @return 创建进程的PCB
      */
     public PCB create() {
-        //申请空白PCB
+        //初始化PCB
         PCB pcb = new PCB();
         int pid = IdUtil.createId();
+        pcb.setPid(pid);
+        pcb.setServiceTime(random.nextInt(30) + 20);
+        pcb.setPriority(random.nextInt(10));
+        PCBList.add(pcb);
 
+        initResource(pcb);
+
+        //申请分配初始资源
+        ResourceRequest req = ResourceRequest.generateBaseRequest(pid);
+        try {
+            //分配内存
+            MainController.systemKernel
+                    .getMemoryManager()
+                    .getMAA()
+                    .allocateMemory(pcb.getMemorySize(), pid);
+
+            //分配资源
+            ba.bankerAlgorithm(req);
+            pcb.updateResources(req.getSource());
+            pcb.setStatus(PStatus.ACTIVE_READY);
+        } catch (RuntimeException e) {
+            log.error(e.getMessage());
+        }
+
+        //是否能加入就绪队列
+        if (pcb.getStatus().equals(PStatus.ACTIVE_READY)) {
+            readyQueue.add(pcb);
+        }
+        return pcb;
+    }
+
+    /** 初始化资源信息 */
+    private void initResource(PCB pcb) {
         //随机生成进程所需资源总数
-        int ra = random.nextInt(4) + 1;
-        int rb = random.nextInt(3) + 1;
-        int rc = random.nextInt(2) + 1;
-        //Collections.addAll(pcb.getMaxR(), ra, rb, rc);
-
+        int ra = random.nextInt(3) + 3;
+        int rb = random.nextInt(2) + 3;
+        int rc = random.nextInt(1) + 3;
 
         //更新银行家算法中的数据
         List<Integer> maxList = new ArrayList<>();
@@ -116,30 +156,7 @@ public class ProcessManager extends Thread {
         data.setMax(maxList);
         data.setNeed(needList);
         data.setAllocation(alocList);
-        ba.getData().put(pid, data);
-
-        ResourceRequest req = ResourceRequest.generateBaseRequest(pid);
-
-        try {
-            ba.bankerAlgorithm(req);
-            pcb.updateResources(req.getSource());
-            pcb.setStatus(PStatus.ACTIVE_READY);
-        } catch (BAException e) {
-            log.error(e.getMessage());
-        }
-
-
-        //初始化PCB
-        pcb.setPid(pid);
-        pcb.setServiceTime(random.nextInt(30) + 20);
-        pcb.setPriority(random.nextInt(10));
-
-        //是否能加入就绪队列
-        if (pcb.getStatus().equals(PStatus.ACTIVE_READY)) {
-            readyQueue.add(pcb);
-        }
-        PCBList.add(pcb);
-        return pcb;
+        ba.getData().put(pcb.getPid(), data);
     }
 
     /** 检查是否有创建时请求资源分配失败的进程，有则重新申请资源 */
@@ -155,6 +172,7 @@ public class ProcessManager extends Thread {
                 } catch (BAException e) {
                     log.error(e.getMessage());
                 }
+                break;
             }
         }
     }
@@ -168,10 +186,12 @@ public class ProcessManager extends Thread {
                     ba.bankerAlgorithm(req);
                     pcb.updateResources(req.getSource());
                     pcb.setStatus(PStatus.ACTIVE_READY);
+                    blockQueue.remove(pcb);
                     readyQueue.add(pcb);
                 } catch (BAException e) {
                     log.error(e.getMessage());
                 }
+                break;
             }
         }
     }
@@ -198,6 +218,11 @@ public class ProcessManager extends Thread {
             return;
         }
 
+        pcb.releaseAllResources();
+        MainController.systemKernel
+                .getMemoryManager()
+                .getMAA()
+                .release(pcb.getPid());
         pcb.setStatus(PStatus.DESTROY);
         readyQueue.remove(pcb);
     }

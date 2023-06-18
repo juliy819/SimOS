@@ -59,7 +59,7 @@ public class BankerAlgorithm {
             resourceManager.allocate(request);
         } else {
             rollbackAllocation(request);
-            log.info("进程P" + id + "的资源请求：" + request.getSource() + " 不通过");
+            throw new BAException("进程P" + id + "的资源请求：" + request.getSource() + " 不通过");
         }
     }
 

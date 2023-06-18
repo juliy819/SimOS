@@ -6,6 +6,5 @@ package com.juliy.simos.system.resource_manager;
  * @date 2022/12/15 18:46
  */
 public enum ResourceStatus {
-    FREE,
-    USED
+    FREE, USED
 }

@@ -1,4 +1,4 @@
-package com.juliy.simos.entity;
+package com.juliy.simos.system.process_manager;
 
 /**
  * 进程状态

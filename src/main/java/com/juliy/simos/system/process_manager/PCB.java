@@ -1,11 +1,15 @@
-package com.juliy.simos.entity;
+package com.juliy.simos.system.process_manager;
 
 
+import com.juliy.simos.controller.MainController;
+import com.juliy.simos.system.process_manager.deadlock.BankerAlgorithm;
+import javafx.application.Platform;
 import javafx.beans.property.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 /**
  * 进程控制块
@@ -38,6 +42,8 @@ public class PCB {
     private final List<Integer> needR;
     /** 已分配资源数 */
     private final List<Integer> alocR;
+    /** 所需内存 */
+    private int memorySize;
 
     public PCB() {
         this.pid = new SimpleIntegerProperty();
@@ -53,6 +59,7 @@ public class PCB {
         this.maxR = new ArrayList<>();
         this.needR = new ArrayList<>();
         this.alocR = new ArrayList<>();
+        this.memorySize = new Random().nextInt(450) + 50;
 
         //数据绑定，设置剩余时间、进程进度为动态更新
         this.remainingTime.bind(this.serviceTime.subtract(this.usedTime));
@@ -75,6 +82,20 @@ public class PCB {
         alocR.set(0, alocR.get(0) + list.get(0));
         alocR.set(1, alocR.get(1) + list.get(1));
         alocR.set(2, alocR.get(2) + list.get(2));
+    }
+
+    public void releaseAllResources() {
+        //释放资源
+        MainController.systemKernel.getResourceManager().release(pid.get());
+        //更新银行家算法中的数据
+        BankerAlgorithm ba = ProcessManager.getBA();
+        ba.getData().remove(pid.get());
+        ba.release(maxR);
+        //释放资源后检查是否有进程可以申请资源
+        Platform.runLater(() -> {
+            MainController.systemKernel.getProcessManager().checkBlock();
+            MainController.systemKernel.getProcessManager().checkUnReady();
+        });
     }
 
     /** 判断是否所有资源均已获得 */
@@ -213,10 +234,17 @@ public class PCB {
         return needR;
     }
 
-    public List<Integer> getAloR() {
+    public List<Integer> getAlocR() {
         return alocR;
     }
 
+    public int getMemorySize() {
+        return memorySize;
+    }
+
+    public void setMemorySize(int memorySize) {
+        this.memorySize = memorySize;
+    }
 
     @Override
     public String toString() {

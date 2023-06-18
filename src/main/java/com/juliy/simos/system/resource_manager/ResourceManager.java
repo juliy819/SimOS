@@ -1,10 +1,13 @@
 package com.juliy.simos.system.resource_manager;
 
+import com.juliy.simos.common.Context;
+import com.juliy.simos.controller.ResourceController;
 import com.juliy.simos.system.process_manager.deadlock.ResourceRequest;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import lombok.Data;
 import org.apache.log4j.Logger;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,13 +20,14 @@ public class ResourceManager {
 
     private static final Logger log = Logger.getLogger(ResourceManager.class);
 
-    private final List<ResourceA> resourceA = new ArrayList<>();
-    private final List<ResourceB> resourceB = new ArrayList<>();
-    private final List<ResourceC> resourceC = new ArrayList<>();
+    private final ObservableList<Resource> resourceA = FXCollections.observableArrayList();
+    private final ObservableList<Resource> resourceB = FXCollections.observableArrayList();
+    private final ObservableList<Resource> resourceC = FXCollections.observableArrayList();
 
-    private int totalANum = 15;
-    private int totalBNum = 12;
-    private int totalCNum = 6;
+
+    private int totalANum = 10;
+    private int totalBNum = 10;
+    private int totalCNum = 10;
     private int freeANum = totalANum;
     private int freeBNum = totalBNum;
     private int freeCNum = totalCNum;
@@ -58,6 +62,7 @@ public class ResourceManager {
         freeBNum -= list.get(1);
         freeCNum -= list.get(2);
 
+        update();
         log.info("进程P" + id + "成功分配资源  " +
                          "当前可用资源数：" + freeANum + "-" + freeBNum + "-" + freeCNum);
     }
@@ -106,7 +111,14 @@ public class ResourceManager {
                 freeCNum++;
             }
         }
+
+        update();
         log.info("进程P" + id + "成功释放资源  " +
                          "当前可用资源数：" + freeANum + "-" + freeBNum + "-" + freeCNum);
+    }
+
+    private void update() {
+        ResourceController controller = (ResourceController) Context.controllerMap.get("Resource");
+        controller.update(freeANum, freeBNum, freeCNum);
     }
 }

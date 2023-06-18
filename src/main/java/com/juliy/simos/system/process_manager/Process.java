@@ -1,7 +1,6 @@
-package com.juliy.simos.entity;
+package com.juliy.simos.system.process_manager;
 
 import com.juliy.simos.controller.MainController;
-import com.juliy.simos.system.process_manager.ProcessManager;
 import com.juliy.simos.system.process_manager.deadlock.BAException;
 import com.juliy.simos.system.process_manager.deadlock.BankerAlgorithm;
 import com.juliy.simos.system.process_manager.deadlock.ResourceRequest;
@@ -35,23 +34,19 @@ public class Process {
                 } catch (BAException e) {
                     log.info("进程P" + pcb.getPid() + "申请资源失败，陷入阻塞");
                     pcb.setStatus(PStatus.ACTIVE_BLOCK);
+                    Platform.runLater(() -> MainController.systemKernel.getProcessManager().getBlockQueue().add(pcb));
                 }
             }
         } else {
             pcb.setUsedTime(pcb.getServiceTime());
             pcb.setStatus(PStatus.DESTROY);
-
             //释放资源
-            MainController.systemKernel.getResourceManager().release(pcb.getPid());
-            //更新银行家算法中的数据
-            BankerAlgorithm ba = ProcessManager.getBA();
-            ba.getData().remove(pcb.getPid());
-            ba.release(pcb.getMaxR());
-            //释放资源后检查是否有进程可以申请资源
-            Platform.runLater(() -> {
-                MainController.systemKernel.getProcessManager().checkBlock();
-                MainController.systemKernel.getProcessManager().checkUnReady();
-            });
+            pcb.releaseAllResources();
+            //释放内存
+            Platform.runLater(() -> MainController.systemKernel
+                    .getMemoryManager()
+                    .getMAA()
+                    .release(pcb.getPid()));
 
         }
     }

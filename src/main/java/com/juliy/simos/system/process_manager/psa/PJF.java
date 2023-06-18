@@ -1,7 +1,7 @@
-package com.juliy.simos.system.process_manager.sa;
+package com.juliy.simos.system.process_manager.psa;
 
-import com.juliy.simos.entity.PCB;
-import com.juliy.simos.entity.PStatus;
+import com.juliy.simos.system.process_manager.PCB;
+import com.juliy.simos.system.process_manager.PStatus;
 import org.apache.log4j.Logger;
 
 import java.util.Comparator;
@@ -23,9 +23,7 @@ public class PJF extends ProcessSchedulingAlgorithm {
 
     @Override
     public void run() {
-        //判断就绪队列中有无不被挂起的线程
-        boolean notEmpty = !readyQueue.stream().filter(p -> p.getStatus() != PStatus.STATIC_READY).toList().isEmpty();
-        while (notEmpty) {
+        while (!readyQueue.isEmpty()) {
             try {
                 TimeUnit.MILLISECONDS.sleep(200);
             } catch (InterruptedException e) {
@@ -43,7 +41,6 @@ public class PJF extends ProcessSchedulingAlgorithm {
             } else {
                 log.error("未找到优先级最高的的进程");
             }
-            notEmpty = !readyQueue.stream().filter(p -> p.getStatus() != PStatus.STATIC_READY).toList().isEmpty();
         }
     }
 }
